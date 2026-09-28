@@ -1,0 +1,90 @@
+$darkcolor: #333;
+$padding: 150px;
+$light: rgb(113, 113, 113);
+$hover: lightgray;
+$iconpadding: 15px;
+$maincolor: rgb(215, 177, 131);
+$textwhite: #f1f1f1;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    background-color: $darkcolor;
+    padding: $padding;
+    text-align: center;
+    color: $textwhite;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+
+    li {
+        flex: 33.33%;
+        text-align: center;
+        background-color: $light;
+        padding: $iconpadding;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hover;
+        }
+    }
+
+
+}
+
+main {
+    display: flex;
+    gap: 2px;
+
+    aside {
+        flex: 30%;
+        padding: $iconpadding;
+        background-color: $maincolor ;
+        li {
+
+        padding-bottom: $iconpadding;
+    }
+
+    }
+
+    
+
+    article {
+        padding: $iconpadding;
+        background-color: $maincolor;
+
+        h2 {
+            padding-bottom: $iconpadding;
+        }
+    }
+}
+
+footer {
+    background-color: $darkcolor;
+    color: $textwhite;
+    text-align: center;
+    padding: $iconpadding;
+}
+
+@media(max-width:576px) {
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+
+        aside {
+            flex: 100%;
+        }
+    }
+
+}
